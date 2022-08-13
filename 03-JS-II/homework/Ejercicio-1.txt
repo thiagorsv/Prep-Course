@@ -1,0 +1,21 @@
+## Instrucciones
+---
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si 
+se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier 
+agujero en tu comprensión.
+
+* `for`
+* `&&`, `||`, `!`
+
+R.- El comando 'for' es utlizado para repetir instrucciones que nosotros coloquemos dentro de este comando, 
+una cierta cantidad de veces.
+
+R.- La operacion '&&' es igual a la 'y' en nuestro idioma o 'and' en ingles, esta operacion nos permite
+realizar una operacion logica para determinar si una sentencia es verdadera o falsa.
+De manera similar, '||' es igual a 'o' en nuestro idioma o 'or' en ingles.
+La operacion '!' es igual a negar a una sentencia, lo que seria semilar a la palabra 'no' en nuestro idioma o
+a 'not' en ingles, de igual manera el resultado es uno logico, verdadero o falso.
+
+
+
+

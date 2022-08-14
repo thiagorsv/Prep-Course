@@ -205,7 +205,7 @@ function mayorACien(array = [120, 89, 87, 100, 101, 157, 169]) {
 }
 
 
-function breakStatement(numero) {
+function breakStatement(numero = -5) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
   //Devolver el array
@@ -213,17 +213,32 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  
+  let array = [];
+  for(var i = 1; i<11; i++){
+    numero += 2;
+    array.push(numero);
+    if(numero===i){
+      return "Se interrumpió la ejecución"
+    }
+  }
+  return array;
 }
 
 
-function continueStatement(numero) {
+function continueStatement(numero = 1) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array.    
   //Devolver el array
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let array = [];
+  for(var i=0; i<10; i++){
+    if(i === 5) continue;
+    numero += 2;
+    array.push(numero);
+  }
+  return array;
 }
 
 

@@ -6,47 +6,67 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+  const objeto = {
+    nombre: arguments[0],
+    edad: arguments[1],
+    meow: function(){
+      return "Meow!";
+    }
+  }
+  return objeto;
 }
 
-function agregarPropiedad (objeto, property) {
+function agregarPropiedad (objeto = {"x": 1, "y": 2}, property = "z") {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  objeto[property] = null;
+  return objeto;
 }
 
-function invocarMetodo (objeto, metodo) {
+function invocarMetodo (objeto = {"x":1, "imprimir": function(){console.log("Works! :D")}}, metodo = "imprimir") {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
+  objeto[metodo]();
 }
 
-function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
+function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso = {"numeroMisterioso": 5}) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-
+  numero  = objetoMisterioso["numeroMisterioso"];
+  return numero*5;
 }
 
-function eliminarPropiedad (objeto, unaPropiedad) {
+function eliminarPropiedad (objeto = {"x":1, "y":2 , "z": 3}, unaPropiedad = "z") {
   // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
+  delete objeto[unaPropiedad];
+  return objeto;
 }
 
-function nuevoUsuario (nombre, email, password) {
+function nuevoUsuario (nombre = "Diego", email = "diegorsv@gmail.com", password = "12345") {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-
+  const obj = {
+    nombre: arguments[0],
+    email: arguments[1],
+    password: arguments[2]
+  }
+  return obj;
 }
 
 function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+   
 }
 
 function tienePropiedad (objeto, propiedad) {

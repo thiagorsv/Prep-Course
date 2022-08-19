@@ -62,58 +62,86 @@ function nuevoUsuario (nombre = "Diego", email = "diegorsv@gmail.com", password 
   return obj;
 }
 
-function tieneEmail (usuario) {
+function tieneEmail (usuario = {"nombre": "Diego", "email": "diegorsv@gmail.com", "password": "12345"}) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+  if (usuario["email"] !== undefined && usuario["email"] !== null && usuario["email"] !== ""){
+    return true;
+  } else{
+    return false;
+  }
    
 }
 
-function tienePropiedad (objeto, propiedad) {
-  // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
+function tienePropiedad (objeto = {"x": 1, "y": 2, "z": 3}, propiedad = "y") {
+  // Devuelve "true" si el objeto (parámetro :"objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  for(let prop in objeto){
+    if(prop === propiedad) {return true;
+  } else{
+    return false;
+  }
+  }
 }
 
-function verificarPassword (usuario, password) {
+function verificarPassword (usuario = {"nombre": "Diego", "email": "diegorsv@gmail.com", "password": "12345"}, password = "1234") {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
+  if(usuario["password"] == password) return true;
+  return false
 }
 
-function actualizarPassword (usuario, nuevaPassword) {
+function actualizarPassword (usuario = {"nombre": "Diego", "email": "diegorsv@gmail.com", "password": "12345"}, nuevaPassword = "98765") {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
+  usuario["password"] = nuevaPassword;
+  return usuario;
+
 }
 
-function agregarAmigo (usuario, nuevoAmigo) {
+function agregarAmigo (usuario = {"nombre": "Diego", "email": "diegorsv@gmail.com", "password": "12345", "amigos": [Julian, Pedro]}, nuevoAmigo = "Martha") {
   // "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+  usuario["amigos"].push(arguments[1]);
+  return usuario;
 }
 
-function pasarUsuarioAPremium (usuarios) {
+function pasarUsuarioAPremium (usuarios = [usuario1 = {"nombre": "Luis", "esPremium": true}, usuario2 = {"nombre": "Juan", "esPremium": false}, usuario3 = {"nombre": "Joaquin", "esPremium": false}]) {
   // "usuarios" es un array de objetos "usuario"
   // Cada objeto "usuario" tiene la propiedad "esPremium"
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  for(var i=0; i<usuarios.length; i++){
+    usuarios[i]["esPremium"] = true;
+  }
+  return usuarios;
 }
 
-function sumarLikesDeUsuario (usuario) {
+function sumarLikesDeUsuario (usuario = {"nombre": "Luis", "posts": [{"funny": 4, "likes": 10, "hate": 1},{"funny": 5, "likes": 12, "hate": 0}]}) {
   // "usuario" tiene una propiedad llamada "posts" que es un array
   // "posts" es un array de objetos "post"
   // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  let suma = 0;
+  let data = usuario["posts"];
+  for(var i=0; i<data.length; i++){
+    suma = suma + data[i]["likes"];
+  }
+  return suma;
 }
 
-function agregarMetodoCalculoDescuento (producto) {
+function agregarMetodoCalculoDescuento (producto = {}){
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
   // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
@@ -123,7 +151,8 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  producto["precio"] = 100;
+  producto["porcentajeDeDecuento"] = 0.1;
 }
 
 // No modificar nada debajo de esta línea

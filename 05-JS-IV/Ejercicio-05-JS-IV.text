@@ -1,0 +1,19 @@
+## Instrucciones
+---
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente 
+cualquier agujero en tu comprensión.
+
+	* Objetos
+	* Propiedades
+	* Métodos
+	* Bucle `for…in`
+	* Notación de puntos vs notación de corchetes
+
+    R.-
+    1.- Un objeto es un listado o conjunto de datos a los cuales podemos acceder por medio de su clave. Esta clave puede ser de cualquier tipo al igual que el dato de este.
+    2.- Se le dice propiedad a uno de los datos almacenados dentro de un objeto.
+    3.- "Metodo" se refiere a una propiedad dentro de un objeto la cual almacena una funcion.
+    4.- El Bucle 'for...in' nos permite obtener de forma secuencial las propiedades y metodos almacenados en un objeto.
+    5.- Despues de definir un objeto nos interesa poder trabajar con el, ya sea acceder a su informacion, eliminar algun dato, agregar otro, etc, para hacer referencia entonces a alguno de los datos de nuestro
+    objeto se utilizan dos notaciones, la notacion punto la cual se utiliza de la siguiente forma: objeto.(propiedad o metodo), y la notacion corchete que se utiliza de la siguiente forma: objeto[propiedad o metodo], 
+    como se nota, el nombre de cada notacion hace referencia al tipo de simbolo que se utiliza.

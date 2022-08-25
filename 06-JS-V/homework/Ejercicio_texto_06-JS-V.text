@@ -11,5 +11,6 @@ R.-
 'prototype' es una propiedad dentro de las clases que nos permite definir metodos dentro de objetos sin que
 estos consuman demasiados recursos de memoria.
 
-Cuando nosotros definimos una nueva clase hay ocasiones en las que nos interesa que las propiedades o metodos
-tengan unos valores predeterminados o en otras palabras inicializar una clase.
+Es muchas ocasiones deseamos crear objetos de misma clave, propiedades y metodos pero de distintos valores, 
+para no repetir o copiar el mismo objeto muchas veces existe el concepto de _Constructors_, los cuales son
+funciones que nos permiten crear objetos.
